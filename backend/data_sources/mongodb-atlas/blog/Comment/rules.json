@@ -1,0 +1,94 @@
+{
+    "collection": "Comment",
+    "database": "blog",
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {
+                "%%root._partition": "%%user.id",
+                "%%user": {
+                    "$exists": true
+                }
+            },
+            "fields": {
+                "_id": {
+                    "write": true,
+                    "read": true
+                },
+                "_partition": {
+                    "write": true,
+                    "read": true
+                },
+                "article": {
+                    "write": true,
+                    "read": true
+                },
+                "author": {
+                    "write": true,
+                    "read": true
+                },
+                "comment": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": true,
+            "delete": true,
+            "search": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "loggedIn",
+            "apply_when": {
+                "%%user": {
+                    "$exists": true
+                }
+            },
+            "fields": {
+                "_id": {
+                    "read": true
+                },
+                "_partition": {
+                    "read": true
+                },
+                "article": {
+                    "read": true
+                },
+                "author": {
+                    "read": true
+                },
+                "comment": {
+                    "read": true
+                }
+            },
+            "insert": true,
+            "search": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "all",
+            "apply_when": {
+                "%%true": true
+            },
+            "fields": {
+                "_id": {
+                    "read": true
+                },
+                "_partition": {
+                    "read": true
+                },
+                "article": {
+                    "read": true
+                },
+                "author": {
+                    "read": true
+                },
+                "comment": {
+                    "read": true
+                }
+            },
+            "search": true,
+            "additional_fields": {}
+        }
+    ]
+}

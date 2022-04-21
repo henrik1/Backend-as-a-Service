@@ -1,0 +1,22 @@
+{
+    "id": "624bf8e53d88fd36471c9717",
+    "name": "createUser",
+    "type": "AUTHENTICATION",
+    "config": {
+        "operation_type": "CREATE",
+        "providers": [
+            "local-userpass",
+            "oauth2-facebook",
+            "oauth2-google",
+            "oauth2-apple"
+        ]
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "createNewAuthor"
+            }
+        }
+    }
+}

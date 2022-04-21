@@ -1,0 +1,24 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "_partition": {
+            "bsonType": "string"
+        },
+        "article": {
+            "bsonType": "objectId"
+        },
+        "author": {
+            "bsonType": "objectId"
+        }
+    },
+    "required": [
+        "_id",
+        "_partition",
+        "article",
+        "author"
+    ],
+    "title": "Like"
+}

@@ -1,0 +1,117 @@
+{
+    "collection": "Article",
+    "database": "blog",
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {
+                "%%root._partition": "%%user.id",
+                "%%user": {
+                    "$exists": true
+                }
+            },
+            "fields": {
+                "_id": {
+                    "write": true,
+                    "read": true
+                },
+                "_partition": {
+                    "write": true,
+                    "read": true
+                },
+                "author": {
+                    "write": true,
+                    "read": true
+                },
+                "body": {
+                    "write": true,
+                    "read": true
+                },
+                "comments": {
+                    "write": true,
+                    "read": true
+                },
+                "likes": {
+                    "write": true,
+                    "read": true
+                },
+                "title": {
+                    "write": true,
+                    "read": true
+                }
+            },
+            "insert": true,
+            "delete": true,
+            "search": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "loggedIn",
+            "apply_when": {
+                "%%root.published": true,
+                "%%user": {
+                    "$exists": true
+                }
+            },
+            "fields": {
+                "_id": {
+                    "read": true
+                },
+                "_partition": {
+                    "read": true
+                },
+                "author": {
+                    "read": true
+                },
+                "body": {
+                    "read": true
+                },
+                "comments": {
+                    "write": true,
+                    "read": true
+                },
+                "likes": {
+                    "write": true,
+                    "read": true
+                },
+                "title": {
+                    "read": true
+                }
+            },
+            "insert": true,
+            "search": true,
+            "additional_fields": {}
+        },
+        {
+            "name": "all",
+            "apply_when": {
+                "%%true": true
+            },
+            "fields": {
+                "_id": {
+                    "read": true
+                },
+                "_partition": {
+                    "read": true
+                },
+                "author": {
+                    "read": true
+                },
+                "body": {
+                    "read": true
+                },
+                "comments": {
+                    "read": true
+                },
+                "likes": {
+                    "read": true
+                },
+                "title": {
+                    "read": true
+                }
+            },
+            "search": true,
+            "additional_fields": {}
+        }
+    ]
+}

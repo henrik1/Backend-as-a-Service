@@ -1,0 +1,6 @@
+{
+    "appId": "<INSERT APP_ID>",
+    "appUrl": "https://realm.mongodb.com/groups/624981192c7a3c1adde037b1/apps/62498181dde8519691ada086",
+    "baseUrl": "https://eu-central-1.aws.realm.mongodb.com",
+    "dataSourceName": "mongodb-atlas"
+}

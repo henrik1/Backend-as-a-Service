@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "IBMPlexSans";
+  src: local("IBMPlexSans"),
+  url("./fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: local("PlusJakartaSans"),
+  url("./fonts/PlusJakartaSans-2.6/static/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+  font-weight: 400;
+}
+
+a, a:visited {
+  color: #3399FF
+}
+
+body {
+  margin: 0;
+  font-family: "IBMPlexSans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

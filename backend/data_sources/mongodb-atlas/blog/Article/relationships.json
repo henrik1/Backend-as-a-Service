@@ -1,0 +1,20 @@
+{
+    "author": {
+        "ref": "#/relationship/mongodb-atlas/blog/Author",
+        "source_key": "author",
+        "foreign_key": "_id",
+        "is_list": false
+    },
+    "comments": {
+        "ref": "#/relationship/mongodb-atlas/blog/Comment",
+        "source_key": "comments",
+        "foreign_key": "_id",
+        "is_list": true
+    },
+    "likes": {
+        "ref": "#/relationship/mongodb-atlas/blog/Like",
+        "source_key": "likes",
+        "foreign_key": "_id",
+        "is_list": true
+    }
+}

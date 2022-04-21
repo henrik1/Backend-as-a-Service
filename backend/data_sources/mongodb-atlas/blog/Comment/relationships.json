@@ -1,0 +1,14 @@
+{
+    "article": {
+        "ref": "#/relationship/mongodb-atlas/blog/Article",
+        "source_key": "article",
+        "foreign_key": "_id",
+        "is_list": false
+    },
+    "author": {
+        "ref": "#/relationship/mongodb-atlas/blog/Author",
+        "source_key": "author",
+        "foreign_key": "_id",
+        "is_list": false
+    }
+}

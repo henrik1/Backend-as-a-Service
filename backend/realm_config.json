@@ -1,0 +1,7 @@
+{
+    "app_id": "<INSERT APP_ID>",
+    "config_version": 20210101,
+    "name": "Blogdemo",
+    "location": "DE-FF",
+    "deployment_model": "LOCAL"
+}

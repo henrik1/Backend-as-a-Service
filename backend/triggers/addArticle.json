@@ -1,0 +1,26 @@
+{
+    "id": "624c1e8e60fd5773bf7f403a",
+    "name": "addArticle",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "INSERT"
+        ],
+        "database": "blog",
+        "collection": "Article",
+        "service_name": "mongodb-atlas",
+        "match": {},
+        "project": {},
+        "full_document": false,
+        "full_document_before_change": false,
+        "unordered": false
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "linkAuthorArticles"
+            }
+        }
+    }
+}
